@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VenderCerto — Documentos Legais</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+
+    header { background: #16a34a; padding: 24px 20px 20px; text-align: center; }
+    .logo { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .logo-box { width: 44px; height: 44px; background: rgba(255,255,255,0.15); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1.5px solid rgba(255,255,255,0.25); }
+    .logo-txt { font-size: 17px; font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1; }
+    .logo-tracos { display: flex; gap: 3px; margin-top: 2px; }
+    .traco { height: 3px; width: 13px; border-radius: 2px; }
+    .logo-name { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.3px; }
+    .logo-sub { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 400; display: block; }
+
+    nav { display: flex; background: #fff; border-bottom: 1px solid #e2e8f0; }
+    nav button { flex: 1; padding: 14px; font-size: 14px; font-weight: 700; border: none; background: none; cursor: pointer; color: #94a3b8; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    nav button.active { color: #16a34a; border-bottom-color: #16a34a; }
+
+    .doc { display: none; max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; }
+    .doc.active { display: block; }
+
+    h1 { font-size: 26px; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+    .data { font-size: 13px; color: #94a3b8; margin-bottom: 32px; }
+    h2 { font-size: 16px; font-weight: 700; color: #0f172a; margin: 28px 0 10px; }
+    p { font-size: 15px; color: #475569; margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    ul li { font-size: 15px; color: #475569; margin-bottom: 6px; }
+    .badge { display: inline-block; background: #f0fdf4; color: #16a34a; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; border: 1px solid #bbf7d0; margin-bottom: 20px; }
+    .contato { background: #f8fafc; border-radius: 12px; padding: 20px; border: 1px solid #e2e8f0; margin-top: 32px; }
+    .contato p { margin: 0; }
+    a { color: #16a34a; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-box">
+      <span class="logo-txt">VC</span>
+      <div class="logo-tracos">
+        <div class="traco" style="background:#FFE600"></div>
+        <div class="traco" style="background:#EE4D2D"></div>
+      </div>
+    </div>
+    <div>
+      <span class="logo-name">VenderCerto</span>
+      <span class="logo-sub">Calculadora Marketplace</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <button class="active" onclick="mostrar('privacidade', this)">Política de Privacidade</button>
+  <button onclick="mostrar('termos', this)">Termos de Uso</button>
+</nav>
+
+<!-- POLÍTICA DE PRIVACIDADE -->
+<div id="privacidade" class="doc active">
+  <h1>Política de Privacidade</h1>
+  <p class="data">Última atualização: abril de 2025</p>
+  <span class="badge">✅ Nenhum dado pessoal coletado</span>
+
+  <h2>1. Quem somos</h2>
+  <p>O VenderCerto é uma calculadora de margem para vendedores de marketplaces como Mercado Livre e Shopee. Este documento explica como tratamos (ou não tratamos) os seus dados.</p>
+
+  <h2>2. Dados que NÃO coletamos</h2>
+  <p>O VenderCerto não coleta, armazena, transmite nem compartilha qualquer dado pessoal. Especificamente:</p>
+  <ul>
+    <li>Não pedimos nome, e-mail, CPF ou qualquer identificação</li>
+    <li>Não acessamos sua câmera, microfone, localização ou contatos</li>
+    <li>Não rastreamos seu comportamento de uso</li>
+    <li>Não exibimos anúncios de terceiros</li>
+    <li>Não usamos cookies ou tecnologias de rastreamento</li>
+  </ul>
+
+  <h2>3. Dados armazenados localmente</h2>
+  <p>Os dados que você insere no app (custos, preços, histórico de produtos) são salvos exclusivamente no armazenamento local do seu dispositivo (AsyncStorage). Esses dados:</p>
+  <ul>
+    <li>Ficam apenas no seu celular</li>
+    <li>Nunca são enviados para nossos servidores (não temos servidores)</li>
+    <li>São apagados ao desinstalar o app</li>
+    <li>Você tem controle total sobre eles</li>
+  </ul>
+
+  <h2>4. Compartilhamento de resultados</h2>
+  <p>O recurso de compartilhamento gera uma imagem localmente no seu dispositivo e a envia pelo aplicativo de sua escolha (WhatsApp, e-mail etc.). O VenderCerto não tem acesso ao conteúdo compartilhado.</p>
+
+  <h2>5. Serviços de terceiros</h2>
+  <p>O app utiliza a plataforma Expo (React Native) para funcionar. A Expo pode coletar dados técnicos anônimos de diagnóstico. Consulte a política de privacidade da Expo em <a href="https://expo.dev/privacy" target="_blank">expo.dev/privacy</a>.</p>
+
+  <h2>6. Crianças</h2>
+  <p>O VenderCerto não é direcionado a crianças menores de 13 anos e não coleta dados desse público.</p>
+
+  <h2>7. Alterações nesta política</h2>
+  <p>Podemos atualizar esta política ocasionalmente. Qualquer mudança será refletida na data de atualização no topo desta página.</p>
+
+  <h2>8. Contato</h2>
+  <div class="contato">
+    <p>Dúvidas sobre privacidade? Entre em contato:<br/>
+    <a href="mailto:arthur.fernandes@dgigroup.com.br">arthur.fernandes@dgigroup.com.br</a></p>
+  </div>
+</div>
+
+<!-- TERMOS DE USO -->
+<div id="termos" class="doc">
+  <h1>Termos de Uso</h1>
+  <p class="data">Última atualização: abril de 2025</p>
+
+  <h2>1. Aceitação dos termos</h2>
+  <p>Ao baixar ou usar o VenderCerto, você concorda com estes Termos de Uso. Se não concordar, não utilize o aplicativo.</p>
+
+  <h2>2. Descrição do serviço</h2>
+  <p>O VenderCerto é uma calculadora de margem de lucro para vendedores de marketplaces. O app calcula estimativas de lucro, margem, markup e ROI com base nos valores informados pelo usuário.</p>
+
+  <h2>3. Caráter estimativo dos resultados</h2>
+  <p>Os resultados apresentados pelo VenderCerto são <strong>estimativas</strong> baseadas nos dados inseridos pelo usuário e nas tabelas de taxas disponíveis no momento do desenvolvimento. O usuário deve estar ciente de que:</p>
+  <ul>
+    <li>As taxas dos marketplaces podem mudar a qualquer momento</li>
+    <li>O app pode não refletir imediatamente essas mudanças</li>
+    <li>Os resultados não substituem a análise financeira profissional</li>
+    <li>Decisões de negócio baseadas nos resultados são de responsabilidade exclusiva do usuário</li>
+  </ul>
+
+  <h2>4. Isenção de responsabilidade</h2>
+  <p>O VenderCerto não se responsabiliza por perdas financeiras, decisões de negócio ou qualquer dano decorrente do uso das estimativas apresentadas pelo aplicativo. O uso é por conta e risco do usuário.</p>
+
+  <h2>5. Propriedade intelectual</h2>
+  <p>O VenderCerto, incluindo seu nome, logo, design e código, é protegido por direitos autorais. É proibido copiar, modificar, distribuir ou criar produtos derivados sem autorização expressa.</p>
+
+  <h2>6. Uso permitido</h2>
+  <p>Você pode usar o VenderCerto para fins pessoais e comerciais legítimos. É proibido:</p>
+  <ul>
+    <li>Fazer engenharia reversa do aplicativo</li>
+    <li>Usar o app para fins ilegais</li>
+    <li>Tentar comprometer a segurança ou funcionamento do app</li>
+  </ul>
+
+  <h2>7. Disponibilidade</h2>
+  <p>Não garantimos disponibilidade ininterrupta do aplicativo. Podemos atualizar, modificar ou descontinuar o VenderCerto a qualquer momento sem aviso prévio.</p>
+
+  <h2>8. Lei aplicável</h2>
+  <p>Estes termos são regidos pelas leis brasileiras. Qualquer disputa será resolvida no foro da comarca do desenvolvedor.</p>
+
+  <h2>9. Contato</h2>
+  <div class="contato">
+    <p>Dúvidas sobre os termos? Entre em contato:<br/>
+    <a href="mailto:arthur.fernandes@dgigroup.com.br">arthur.fernandes@dgigroup.com.br</a></p>
+  </div>
+</div>
+
+<script>
+  function mostrar(id, btn) {
+    document.querySelectorAll('.doc').forEach(d => d.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
