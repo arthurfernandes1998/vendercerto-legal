@@ -161,6 +161,16 @@
   }
   .aviso-importante p { color: #7f1d1d; margin: 0; font-size: 14px; line-height: 1.6; }
 
+  .aviso-coleta {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: #eff6ff; border: 1px solid #bfdbfe;
+    border-left: 4px solid #2563eb;
+    border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+  }
+  .aviso-coleta-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .aviso-coleta strong { display: block; font-family: 'Syne', sans-serif; font-size: 14px; color: #1d4ed8; margin-bottom: 6px; }
+  .aviso-coleta p { color: #1e40af; font-size: 13px; line-height: 1.6; margin: 0; }
+
   .local-badge {
     display: inline-flex; align-items: center; gap: 6px;
     background: var(--verde-claro); border: 1px solid #86efac;
@@ -291,6 +301,15 @@
 
     <section id="p-dados">
       <h2><span class="num">1</span> Dados coletados</h2>
+
+      <div class="aviso-coleta">
+        <span class="aviso-coleta-icon">📢</span>
+        <div>
+          <strong>Estado atual — abril de 2025</strong>
+          <p>Hoje, o VenderCerto <strong>não coleta nenhum dado pessoal</strong> em servidores externos. Tudo fica armazenado apenas no seu dispositivo. No entanto, à medida que o app evolui — com novos recursos, sincronização em nuvem, funcionalidades premium e melhorias de desempenho — <strong>essa política poderá mudar</strong>. Qualquer alteração significativa na coleta de dados será comunicada com antecedência pelo próprio app e refletida nesta página.</p>
+        </div>
+      </div>
+
       <p>O VenderCerto foi desenvolvido com privacidade como prioridade. <strong>Não exigimos cadastro, login ou e-mail</strong> para usar o aplicativo.</p>
 
       <h3>Dados inseridos voluntariamente pelo usuário</h3>
