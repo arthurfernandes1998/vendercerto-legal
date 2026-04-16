@@ -82,6 +82,7 @@
 
   .local-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--verde-claro); border: 1px solid #86efac; border-radius: 8px; padding: 3px 10px; font-size: 12px; font-weight: 600; color: #166534; margin-bottom: 8px; }
   .nuvem-badge { display: inline-flex; align-items: center; gap: 6px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 3px 10px; font-size: 12px; font-weight: 600; color: #1d4ed8; margin-bottom: 8px; }
+  .opcional-badge { display: inline-flex; align-items: center; gap: 6px; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 3px 10px; font-size: 12px; font-weight: 600; color: #92400e; margin-bottom: 8px; }
 
   .premium-box { background: #0f172a; border-radius: 16px; padding: 22px 26px; margin: 16px 0; border: 1px solid #1e293b; }
   .premium-box h3 { font-family: 'Syne', sans-serif; color: #4ade80; font-size: 15px; margin-bottom: 10px; }
@@ -99,6 +100,12 @@
   .status-premium { color: #d97706; }
   @media (max-width: 520px) { .modulos-grid { grid-template-columns: 1fr; } }
 
+  .setores-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+  .setor { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 12px; text-align: center; }
+  .setor-emoji { font-size: 24px; display: block; margin-bottom: 4px; }
+  .setor-nome { font-size: 12px; font-weight: 700; color: var(--texto); }
+  @media (max-width: 520px) { .setores-grid { grid-template-columns: repeat(2, 1fr); } }
+
   .acesso-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 16px; padding: 18px 22px; margin: 14px 0; }
   .acesso-box h3 { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: #1d4ed8; margin-bottom: 12px; }
   .acesso-nivel { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #bfdbfe; }
@@ -109,6 +116,16 @@
   .badge-premium { background: #fef9c3; color: #92400e; }
   .acesso-desc { font-size: 13px; color: var(--texto-sec); line-height: 1.5; }
   .acesso-desc strong { color: var(--texto); }
+
+  .dpo-box { background: #f0f9ff; border: 1px solid #7dd3fc; border-radius: 14px; padding: 18px 22px; margin: 16px 0; }
+  .dpo-box h3 { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #075985; margin-bottom: 8px; }
+  .dpo-box p { color: #075985; font-size: 14px; margin: 4px 0; }
+  .dpo-box a { color: #0284c7; font-weight: 600; text-decoration: none; }
+
+  .terceiro-item { background: var(--card); border: 1px solid var(--borda); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+  .terceiro-titulo { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: var(--texto); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .terceiro-item p { font-size: 13px; color: var(--texto-sec); margin: 4px 0; line-height: 1.5; }
+  .terceiro-item strong { color: var(--texto); }
 
   hr { border: none; border-top: 1px solid var(--borda); margin: 36px 0; }
 
@@ -135,7 +152,7 @@
     <img src="https://arthurfernandes1998.github.io/vendercerto-legal/icon.png" alt="VenderCerto" class="logo-img" onerror="this.style.display='none'" />
     <h1>Central Legal</h1>
     <p>Política de Privacidade e Termos de Uso</p>
-    <span class="badge-data">📅 Atualizado em abril de 2026 · v1.2</span>
+    <span class="badge-data">📅 Atualizado em 16 de abril de 2026 · v1.2.0</span>
   </div>
 </header>
 
@@ -150,7 +167,9 @@
   </div>
 </div>
 
-<!-- PRIVACIDADE -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- PRIVACIDADE                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 <div id="painel-privacidade" class="painel painel-privacidade ativo">
   <div class="subnav">
     <ul>
@@ -160,7 +179,9 @@
       <li><a href="#p-armazenamento">Armazenamento</a></li>
       <li><a href="#p-retencao">Retenção</a></li>
       <li><a href="#p-terceiros">Terceiros</a></li>
+      <li><a href="#p-analytics">Análise de uso</a></li>
       <li><a href="#p-direitos">Seus direitos</a></li>
+      <li><a href="#p-dpo">Encarregado</a></li>
       <li><a href="#p-contato">Contato</a></li>
     </ul>
   </div>
@@ -170,11 +191,11 @@
       <h2>📋 Resumo rápido</h2>
       <ul>
         <li><a href="#p-acesso">→ Três níveis de acesso</a></li>
-        <li><a href="#p-dados">→ Dados coletados com login</a></li>
+        <li><a href="#p-dados">→ Dados coletados</a></li>
         <li><a href="#p-armazenamento">→ Supabase em São Paulo</a></li>
-        <li><a href="#p-retencao">→ Retenção de 12 meses</a></li>
-        <li><a href="#p-terceiros">→ Sem rastreamento de anúncios</a></li>
-        <li><a href="#p-direitos">→ Você pode apagar tudo</a></li>
+        <li><a href="#p-retencao">→ Enquanto a conta existir</a></li>
+        <li><a href="#p-analytics">→ Analytics com consentimento</a></li>
+        <li><a href="#p-direitos">→ 9 direitos garantidos</a></li>
       </ul>
     </div>
 
@@ -184,7 +205,7 @@
         <h3>🔓 Como funciona o acesso</h3>
         <div class="acesso-nivel">
           <span class="acesso-badge badge-livre">Sem login</span>
-          <div class="acesso-desc"><strong>Marketplace, Loja Física e Delivery</strong> — uso livre, sem cadastro. Nenhum dado é enviado a servidores.</div>
+          <div class="acesso-desc"><strong>Calculadoras dos 6 setores</strong> — uso livre das calculadoras básicas, sem cadastro. Dados ficam apenas no dispositivo.</div>
         </div>
         <div class="acesso-nivel">
           <span class="acesso-badge badge-login">Login + perfil</span>
@@ -192,8 +213,18 @@
         </div>
         <div class="acesso-nivel">
           <span class="acesso-badge badge-premium">Premium (futuro)</span>
-          <div class="acesso-desc">Alguns módulos poderão se tornar pagos. Você será notificado com antecedência pelo app.</div>
+          <div class="acesso-desc">Alguns módulos poderão se tornar pagos no futuro. Você será notificado com antecedência pelo app.</div>
         </div>
+      </div>
+
+      <h3>Setores suportados</h3>
+      <div class="setores-grid">
+        <div class="setor"><span class="setor-emoji">🛒</span><div class="setor-nome">Marketplace</div></div>
+        <div class="setor"><span class="setor-emoji">🏪</span><div class="setor-nome">Loja Física</div></div>
+        <div class="setor"><span class="setor-emoji">🛵</span><div class="setor-nome">Delivery</div></div>
+        <div class="setor"><span class="setor-emoji">🛠️</span><div class="setor-nome">Serviços</div></div>
+        <div class="setor"><span class="setor-emoji">🏭</span><div class="setor-nome">Produção</div></div>
+        <div class="setor"><span class="setor-emoji">🚛</span><div class="setor-nome">Transporte</div></div>
       </div>
     </section>
 
@@ -203,15 +234,16 @@
         <span class="aviso-coleta-icon">☁️</span>
         <div>
           <strong>Sincronização em nuvem — abril de 2026</strong>
-          <p>Usuários com login têm dados armazenados em servidores seguros no Brasil. Usuários sem login continuam com dados apenas no dispositivo.</p>
+          <p>Usuários com login têm o perfil armazenado em servidores seguros no Brasil. Usuários sem login continuam com dados apenas no dispositivo.</p>
         </div>
       </div>
 
       <h3>No cadastro</h3>
       <span class="nuvem-badge">☁️ Nuvem — Supabase São Paulo</span>
       <ul>
-        <li>E-mail e senha</li>
+        <li>E-mail e senha (senha armazenada com hash, nunca em texto puro)</li>
         <li>Data e hora do aceite desta Política e dos Termos de Uso</li>
+        <li>Data de criação da conta e último acesso</li>
       </ul>
 
       <h3>No perfil da empresa</h3>
@@ -219,21 +251,26 @@
       <ul>
         <li>Nome da empresa</li>
         <li>CNPJ <em>ou</em> CPF (obrigatório para acesso completo)</li>
-        <li>Setor de atuação e alíquota tributária</li>
-        <li>Telefone e foto de perfil (opcionais)</li>
+        <li>Setor de atuação (Marketplace, Loja Física, Delivery, Serviços, Produção ou Transporte)</li>
+        <li>Alíquota tributária e regime tributário</li>
       </ul>
 
       <h3>Dados financeiros inseridos no app</h3>
-      <span class="nuvem-badge">☁️ Nuvem — Supabase São Paulo</span>
+      <span class="local-badge">🔒 Apenas no dispositivo (por enquanto)</span>
       <ul>
-        <li>Histórico de cálculos (marketplace, loja física, delivery)</li>
-        <li>Lançamentos de Fluxo de Caixa, dados de DRE e custos fixos</li>
+        <li>Histórico de cálculos de todos os setores</li>
+        <li>Lançamentos de Fluxo de Caixa e dados de DRE</li>
+        <li>Custos fixos da empresa e faturamento previsto</li>
+        <li>Favoritos e preferências de uso</li>
       </ul>
+      <p style="font-size: 13px; color: var(--texto-sec); margin-top: 8px;">A sincronização automática desses dados na nuvem está planejada para uma versão futura. Até lá, você pode gerar backups manuais em <em>Configurações → Dados</em>.</p>
 
-      <h3>Sem login (apenas no dispositivo)</h3>
+      <h3>Preferências do app</h3>
       <span class="local-badge">🔒 Apenas no dispositivo</span>
       <ul>
-        <li>Preferências de tema e contador de cálculos realizados</li>
+        <li>Tema escolhido (claro/escuro)</li>
+        <li>Contador de cálculos realizados (limite anônimo)</li>
+        <li>Consentimento de análise de uso (veja seção 7)</li>
       </ul>
 
       <div class="destaque">
@@ -246,12 +283,12 @@
       <p>Seus dados são usados exclusivamente para:</p>
       <ul>
         <li>Autenticar e identificar você no app</li>
-        <li>Sincronizar dados financeiros entre dispositivos</li>
         <li>Calcular margens, gerar DRE, Fluxo de Caixa e relatórios</li>
         <li>Identificar a empresa nos relatórios (CNPJ/CPF)</li>
-        <li>Enviar comunicações sobre o app pelo e-mail cadastrado</li>
+        <li>Responder a solicitações de suporte quando você entra em contato</li>
+        <li>Enviar comunicações essenciais sobre o app pelo e-mail cadastrado</li>
       </ul>
-      <p><strong>Não usamos seus dados para publicidade, venda a terceiros ou criação de perfis comportamentais.</strong></p>
+      <p><strong>Não usamos seus dados para publicidade, venda a terceiros ou criação de perfis comportamentais de marketing.</strong></p>
     </section>
 
     <section id="p-armazenamento">
@@ -259,51 +296,114 @@
       <p>Os dados de usuários com login ficam no <strong>Supabase</strong>, com servidores no <strong>Brasil (São Paulo)</strong>.</p>
       <ul>
         <li>Comunicação criptografada via HTTPS em todas as transmissões</li>
-        <li>Cada usuário acessa apenas seus próprios dados (isolamento total)</li>
+        <li>Isolamento por Row Level Security (RLS) — cada usuário acessa apenas seus próprios dados</li>
+        <li>Senhas armazenadas com hash unidirecional (nunca em texto puro)</li>
         <li>Token de sessão protegido pelo sistema de segurança nativo do celular</li>
       </ul>
-      <p>Usuários sem login: todos os dados ficam no dispositivo. Desinstalar o app apaga tudo permanentemente.</p>
-      <p>No primeiro login, o app oferece a opção de importar dados locais para a nuvem. A importação é opcional.</p>
+      <p>Usuários sem login: todos os dados ficam apenas no dispositivo. Desinstalar o app apaga tudo permanentemente.</p>
     </section>
 
     <section id="p-retencao">
       <h2><span class="num">5</span> Retenção de dados</h2>
-      <p>Seus dados ficam armazenados enquanto sua conta estiver ativa. Para contas inativas:</p>
+      <p>Seus dados ficam armazenados <strong>enquanto sua conta existir</strong>. Não há exclusão automática por inatividade.</p>
       <ul>
-        <li>Após <strong>11 meses sem acesso</strong> — enviamos um e-mail de aviso</li>
-        <li>Após <strong>12 meses sem acesso</strong> sem resposta — todos os dados são excluídos permanentemente</li>
+        <li>Você pode solicitar a exclusão a qualquer momento em <em>Configurações → Zona de perigo → Excluir minha conta</em></li>
+        <li>A exclusão remove permanentemente todos os dados do servidor e do dispositivo</li>
+        <li>Dados necessários para cumprimento de obrigações legais podem ser mantidos pelo prazo estabelecido em lei, mesmo após a exclusão da conta</li>
       </ul>
       <div class="destaque">
-        <p>💡 Para evitar a exclusão automática, basta abrir o app pelo menos uma vez por ano.</p>
+        <p>💡 Para proteger seus dados antes de excluir a conta, exporte um backup em <em>Configurações → Dados → Exportar meus dados</em>.</p>
       </div>
     </section>
 
     <section id="p-terceiros">
       <h2><span class="num">6</span> Serviços de terceiros</h2>
-      <p>O VenderCerto utiliza os seguintes serviços externos:</p>
+      <p>Para oferecer o serviço, o VenderCerto compartilha alguns dados com os seguintes parceiros:</p>
+
+      <div class="terceiro-item">
+        <div class="terceiro-titulo">☁️ Supabase</div>
+        <p><strong>Finalidade:</strong> Armazenamento de conta, perfil da empresa e autenticação</p>
+        <p><strong>Dados compartilhados:</strong> E-mail, senha com hash, CNPJ/CPF, nome da empresa, setor, alíquota</p>
+        <p><strong>Localização:</strong> Brasil — São Paulo (GRU)</p>
+      </div>
+
+      <div class="terceiro-item">
+        <div class="terceiro-titulo">📊 Mixpanel</div>
+        <p><strong>Finalidade:</strong> Análise de uso agregada para melhorar o app (apenas quando você consente)</p>
+        <p><strong>Dados compartilhados:</strong> Eventos de navegação, telas acessadas, tipo de cálculo realizado. <strong>NÃO inclui</strong> CNPJ, CPF, valores financeiros, nome da empresa ou qualquer dado pessoal identificável.</p>
+        <p><strong>Localização:</strong> Estados Unidos</p>
+        <p><strong>Como revogar:</strong> Configurações → Privacidade → Permitir análise de uso (desligar)</p>
+      </div>
+
+      <div class="terceiro-item">
+        <div class="terceiro-titulo">▶️ Google Play</div>
+        <p><strong>Finalidade:</strong> Distribuição do aplicativo e avaliações</p>
+        <p><strong>Dados compartilhados:</strong> Dados de instalação e avaliações que você optar por publicar</p>
+        <p><strong>Localização:</strong> Estados Unidos</p>
+      </div>
+
+      <div class="terceiro-item" style="opacity: 0.7;">
+        <div class="terceiro-titulo">🔐 Login social (em preparação)</div>
+        <p>O VenderCerto planeja oferecer login via Google e Facebook no futuro. Quando ativados, serão usados apenas para autenticação e apenas o e-mail e nome público serão compartilhados. Esta política será atualizada antes da ativação.</p>
+      </div>
+
+      <div class="destaque">
+        <p>📢 <strong>Sem SDKs de publicidade.</strong> O VenderCerto não contém pixels de rastreamento de anúncios nem tecnologias de monitoramento comportamental de marketing.</p>
+      </div>
+    </section>
+
+    <section id="p-analytics">
+      <h2><span class="num">7</span> Análise de uso (Mixpanel)</h2>
+      <p>Para entender como o app é usado e priorizar melhorias, podemos enviar eventos anônimos de navegação para o Mixpanel. Exemplos de eventos rastreados:</p>
       <ul>
-        <li><strong>Supabase</strong> — banco de dados e autenticação (São Paulo)</li>
-        <li><strong>Google Play</strong> — distribuição do app</li>
-        <li><strong>RevenueCat + Google Play Billing</strong> — gerenciamento de assinaturas (quando ativado o modelo premium)</li>
+        <li>Qual calculadora foi aberta (marketplace, loja física, etc.)</li>
+        <li>Qual aba foi acessada (Dashboard, Gerencial, Fiscal)</li>
+        <li>Conclusão do onboarding e etapas visitadas</li>
+        <li>Cliques em CTAs (criar conta, agora não, etc.)</li>
+      </ul>
+      <p><strong>O que NÃO é enviado:</strong></p>
+      <ul>
+        <li>CNPJ, CPF ou qualquer documento</li>
+        <li>Valores financeiros (preço, lucro absoluto, custos, faturamento)</li>
+        <li>Nome da empresa ou dados do perfil</li>
+        <li>Conteúdo de cálculos individuais</li>
       </ul>
       <div class="destaque">
-        <p>📢 <strong>Sem rastreamento de anúncios.</strong> O VenderCerto não contém SDKs de publicidade, pixels de rastreamento ou qualquer tecnologia de monitoramento comportamental.</p>
+        <p>💡 <strong>Controle granular:</strong> em <em>Configurações → Privacidade → Permitir análise de uso</em>, você pode desativar o envio de eventos a qualquer momento. A alteração tem efeito imediato e uma vez desativado, nenhum novo evento é enviado.</p>
       </div>
     </section>
 
     <section id="p-direitos">
-      <h2><span class="num">7</span> Seus direitos (LGPD)</h2>
-      <p>Você tem direito a:</p>
+      <h2><span class="num">8</span> Seus direitos (LGPD art. 18)</h2>
+      <p>Como titular dos dados, você tem direito a:</p>
       <ul>
-        <li><strong>Acessar</strong> seus dados — disponíveis dentro do app em Minha Empresa e Configurações</li>
-        <li><strong>Corrigir</strong> seus dados — editáveis diretamente no app</li>
-        <li><strong>Excluir</strong> sua conta e todos os dados — em <em>Configurações → Excluir minha conta</em></li>
-        <li><strong>Exportar</strong> seus dados em JSON — em <em>Configurações → Exportar meus dados</em></li>
-        <li><strong>Revogar</strong> o consentimento — excluindo a conta ou entrando em contato</li>
+        <li><strong>Confirmação</strong> de que tratamos seus dados</li>
+        <li><strong>Acesso</strong> aos dados — em <em>Configurações → Dados → Exportar meus dados</em> (formato TXT legível ou JSON)</li>
+        <li><strong>Correção</strong> de dados — em <em>Configurações → Editar perfil da empresa</em></li>
+        <li><strong>Anonimização, bloqueio ou eliminação</strong> de dados desnecessários ou em excesso</li>
+        <li><strong>Portabilidade</strong> em formato estruturado e interoperável (JSON)</li>
+        <li><strong>Eliminação</strong> dos dados tratados com consentimento — em <em>Configurações → Zona de perigo → Excluir minha conta</em></li>
+        <li><strong>Informação</strong> sobre com quem compartilhamos seus dados (seção 6 desta política e em <em>Configurações → Privacidade → Com quem compartilhamos</em>)</li>
+        <li><strong>Informação</strong> sobre consequências de não consentir</li>
+        <li><strong>Revogação do consentimento</strong> — em <em>Configurações → Privacidade</em></li>
       </ul>
-      <div class="aviso-importante">
-        <p>🚨 <strong>A exclusão de conta é irreversível.</strong> Todos os dados financeiros serão permanentemente apagados. Exporte seus dados antes, se necessário.</p>
+      <div class="destaque">
+        <p>📬 <strong>Canal formal de solicitações:</strong> em <em>Configurações → Privacidade → Meus direitos (LGPD)</em>, você encontra botões que geram e-mails pré-preenchidos para exercer cada um desses direitos. Responderemos em até 15 dias.</p>
       </div>
+      <div class="aviso-importante">
+        <p>🚨 <strong>A exclusão de conta é irreversível.</strong> Todos os dados pessoais e financeiros serão permanentemente apagados. Exporte seus dados antes, se necessário.</p>
+      </div>
+    </section>
+
+    <section id="p-dpo">
+      <h2><span class="num">9</span> Encarregado de Dados</h2>
+      <div class="dpo-box">
+        <h3>👤 Equipe VenderCerto</h3>
+        <p>Responsável pelo tratamento de dados pessoais no VenderCerto, conforme art. 41 da LGPD.</p>
+        <p><strong>E-mail:</strong> <a href="mailto:contato@vendercerto.com.br">contato@vendercerto.com.br</a></p>
+        <p><strong>Prazo de resposta:</strong> até 15 dias corridos para solicitações LGPD; até 5 dias úteis para demais assuntos.</p>
+      </div>
+      <p style="font-size: 13px;">Você pode entrar em contato direto com o Encarregado diretamente pelo app em <em>Configurações → Privacidade → Encarregado de Dados</em>.</p>
     </section>
 
     <hr>
@@ -321,7 +421,9 @@
   </main>
 </div>
 
-<!-- TERMOS -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- TERMOS                                                                  -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 <div id="painel-termos" class="painel painel-termos">
   <div class="subnav">
     <ul>
@@ -348,7 +450,7 @@
 
     <section id="t-servico">
       <h2><span class="num">1</span> O Serviço</h2>
-      <p>O <strong>VenderCerto</strong> é um app de gestão financeira e precificação para vendedores brasileiros, oferecendo calculadoras de margem, DRE, Fluxo de Caixa, Comparador de canais, Precificador e Ponto de Equilíbrio.</p>
+      <p>O <strong>VenderCerto</strong> é um app de gestão financeira e precificação para vendedores brasileiros, oferecendo calculadoras de margem para 6 setores, DRE, Fluxo de Caixa, Comparador de canais, Precificador e Ponto de Equilíbrio.</p>
       <div class="destaque">
         <p>⚠️ <strong>Os resultados são estimativas.</strong> As taxas utilizadas podem estar desatualizadas. Confirme sempre nas plataformas antes de tomar decisões. O app não substitui consultoria contábil ou financeira profissional.</p>
       </div>
@@ -356,7 +458,7 @@
 
     <section id="t-acesso">
       <h2><span class="num">2</span> Cadastro e acesso</h2>
-      <p>Os módulos de Marketplace, Loja Física e Delivery são livres, sem cadastro. Os demais módulos exigem criação de conta. Ao criar sua conta, você:</p>
+      <p>As calculadoras dos 6 setores são livres, sem cadastro. Os demais módulos exigem criação de conta. Ao criar sua conta, você:</p>
       <ul>
         <li>Aceita esta Política de Privacidade e estes Termos de Uso</li>
         <li>Declara ser maior de 18 anos e fornecer dados verdadeiros</li>
@@ -371,6 +473,9 @@
         <div class="modulo"><span class="modulo-emoji">🛒</span><div><div class="modulo-nome">Marketplace</div><div class="modulo-status status-free">Sem login</div></div></div>
         <div class="modulo"><span class="modulo-emoji">🏪</span><div><div class="modulo-nome">Loja Física</div><div class="modulo-status status-free">Sem login</div></div></div>
         <div class="modulo"><span class="modulo-emoji">🛵</span><div><div class="modulo-nome">Delivery</div><div class="modulo-status status-free">Sem login</div></div></div>
+        <div class="modulo"><span class="modulo-emoji">🛠️</span><div><div class="modulo-nome">Serviços</div><div class="modulo-status status-free">Sem login</div></div></div>
+        <div class="modulo"><span class="modulo-emoji">🏭</span><div><div class="modulo-nome">Produção</div><div class="modulo-status status-free">Sem login</div></div></div>
+        <div class="modulo"><span class="modulo-emoji">🚛</span><div><div class="modulo-nome">Transporte</div><div class="modulo-status status-free">Sem login</div></div></div>
         <div class="modulo"><span class="modulo-emoji">📚</span><div><div class="modulo-nome">Estudos</div><div class="modulo-status status-login">Login + perfil</div></div></div>
         <div class="modulo"><span class="modulo-emoji">🏢</span><div><div class="modulo-nome">Minha Empresa</div><div class="modulo-status status-login">Login + perfil</div></div></div>
         <div class="modulo"><span class="modulo-emoji">🕐</span><div><div class="modulo-nome">Histórico</div><div class="modulo-status status-login">Login + perfil</div></div></div>
@@ -386,18 +491,19 @@
       <h2><span class="num">4</span> Modelo Premium</h2>
       <div class="premium-box">
         <h3>⭐ Freemium — leia com atenção</h3>
-        <p>O VenderCerto é atualmente gratuito. <strong>A qualquer momento, funcionalidades gratuitas podem se tornar pagas.</strong> Notificaremos pelo app com a maior antecedência possível, mas nos reservamos o direito de alterar o modelo a qualquer tempo.</p>
-        <p>Assinaturas serão gerenciadas pela Google Play. Cancelamento a qualquer momento pelas configurações da Google Play.</p>
+        <p>O VenderCerto é atualmente <strong>totalmente gratuito</strong>, sem qualquer assinatura ativa.</p>
+        <p><strong>A qualquer momento, funcionalidades gratuitas podem se tornar pagas.</strong> Notificaremos pelo app com a maior antecedência possível, mas nos reservamos o direito de alterar o modelo a qualquer tempo.</p>
+        <p>Quando implementadas, assinaturas serão gerenciadas pela Google Play. Cancelamento poderá ser feito a qualquer momento pelas configurações da Google Play.</p>
       </div>
     </section>
 
     <section id="t-conta">
       <h2><span class="num">5</span> Sua conta e exclusão</h2>
       <p>Você é responsável pela segurança da sua senha e pelas atividades realizadas com suas credenciais.</p>
-      <p>Para excluir sua conta, acesse <em>Configurações → Excluir minha conta e todos os dados</em>. A exclusão:</p>
+      <p>Para excluir sua conta, acesse <em>Configurações → Zona de perigo → Excluir minha conta</em>. A exclusão:</p>
       <ul>
         <li>É <strong>irreversível e imediata</strong></li>
-        <li>Remove todos os dados do servidor (perfil, histórico, DRE, Fluxo de Caixa)</li>
+        <li>Remove todos os dados do servidor (perfil) e do dispositivo (histórico, DRE, Fluxo de Caixa)</li>
         <li>Exige confirmação por senha</li>
       </ul>
       <div class="aviso-importante">
@@ -429,10 +535,10 @@
       <div class="contato-inner">
         <h2>📬 Dúvidas sobre os termos?</h2>
         <p>Entre em contato — respondemos em até 5 dias úteis.</p>
-        <a class="contato-btn" href="mailto:arthur.fernandes@dgigroup.com.br?subject=VenderCerto%20%E2%80%94%20Termos%20de%20Uso&body=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20termos%20de%20uso%3A">
+        <a class="contato-btn" href="mailto:contato@vendercerto.com.br?subject=VenderCerto%20%E2%80%94%20Termos%20de%20Uso&body=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20termos%20de%20uso%3A">
           ✉️ Enviar e-mail
         </a>
-        <p class="contato-email">arthur.fernandes@dgigroup.com.br · resposta em até 5 dias úteis</p>
+        <p class="contato-email">contato@vendercerto.com.br · resposta em até 5 dias úteis</p>
       </div>
     </div>
   </main>
